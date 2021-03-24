@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Sarina&display=swap");
+@import "calendar.css";
+
+:root {
+  --off-white: #fff5e6;
+  --gold: #eba93f;
+  --dark-gold: #80560f;
+  --off-black: #393838;
+}
+
+* {
+  box-sizing: border-box;
+  /*padding: 0;*/
+  /*margin: 0;*/
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: var(--off-white);
+  font-family: "Libre Baskerville", serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--off-black);
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+a {
+  font-weight: bold;
+  color: var(--gold);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../assets/header.jpg") no-repeat;
+  background-size: cover;
+  background-position-y: -70px;
+  height: 200px;
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 380px;
+    background-position-y: -90px;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    height: 450px;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 15px 0 auto 0 15px;
+  padding-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 25px 4fr 25px 1fr;
+  }
+}
+
+section {
+  grid-column: 2 / 5;
+  margin: 40px 0;
+}
+
+.subheader {
+  padding-left: 0;
+  padding-right: 0;
+  color: var(--off-black);
+  margin: 20px 0;
+}
+@media (min-width: 768px) {
+  .subheader {
+    margin: 20px 50px;
+  }
+}
+
+.section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px !important;
+}
+@media (min-width: 768px) {
+  .section-header {
+    margin: 20px 25px;
+  }
+}
+
+.section-title {
+  font-family: "Sarina", cursive;
+  margin: 0 15px;
+  color: var(--gold);
+}
+
+.line {
+  height: 2px;
+  background: var(--gold);
+}
+
+.calendar .line {
+  height: 2px;
+  background: var(--off-black);
+}
+
+@media (min-width: 768px) {
+  section > p,
+  section > h3,
+  section > h4 {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+.shapey {
+  background: var(--gold);
+  padding: 10px 15px;
+  text-align: center;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .shapey {
+    background: url("../assets/shapey-shape.svg");
+    background-size: cover;
+    padding: 60px 20%;
+    margin-top: -40px;
+  }
+}
+
+.shapey p {
+  color: var(--off-white);
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .shapey p {
+    font-size: revert;
+  }
+}
+
+header img {
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  header img {
+    width: 60%;
+    margin-top: -60px;
+  }
+}

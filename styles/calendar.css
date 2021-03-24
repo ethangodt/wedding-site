@@ -1,0 +1,74 @@
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.day-wrapper {
+  flex: 1;
+  padding: 0 5px;
+  max-width: 33%;
+  min-width: 100px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+@media (min-width: 1024px) {
+  .day-wrapper {
+    min-width: auto;
+  }
+}
+
+.day-box {
+  border: 2px solid var(--off-black);
+  border-radius: 4px;
+  min-height: 300px;
+  height: 100%;
+  /*padding: 10px;*/
+}
+
+.day-box .broad-event {
+  font-style: italic;
+  font-size: 14px;
+  padding: 0 3%;
+}
+
+.time-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 15px;
+}
+
+.time-line p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.time-line .line {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.time-event > p {
+  font-size: 12px;
+  text-align: right;
+  padding-left: 20%;
+  padding-right: 5px;
+  margin-top: -10px;
+}
+
+.day-wrapper.gold h4 {
+  color: var(--gold);
+}
+
+.gold .day-box {
+  border-color: var(--gold);
+}
+
+.time-event.gold .line {
+  background: var(--gold);
+}
+
+.time-event.gold .time-line p {
+  color: var(--gold);
+}
