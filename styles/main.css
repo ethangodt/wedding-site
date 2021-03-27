@@ -45,7 +45,7 @@ header {
   align-items: center;
   background: url("../assets/header.jpg") no-repeat;
   background-size: cover;
-  background-position-y: -70px;
+  background-position-y: 0px;
   height: 200px;
 }
 
@@ -64,8 +64,14 @@ header {
 
 main {
   display: grid;
-  grid-template-columns: 15px 0 auto 0 15px;
+  grid-template-columns: 5px 0 auto 0 5px;
   padding-bottom: 100px;
+}
+
+@media (min-width: 375px) {
+  main {
+    grid-template-columns: 15px 0 auto 0 15px;
+  }
 }
 
 @media (min-width: 768px) {
