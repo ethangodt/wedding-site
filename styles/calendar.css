@@ -10,12 +10,11 @@
   max-width: 33%;
   min-width: 100px;
   text-align: center;
-  /*margin-bottom: 35px;*/
+  margin-bottom: 70px;
 }
 @media (min-width: 1024px) {
   .day-wrapper {
     min-width: auto;
-    margin-bottom: 70px;
   }
 }
 
