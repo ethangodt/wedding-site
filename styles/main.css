@@ -2,10 +2,10 @@
 @import "calendar.css";
 
 :root {
-  --off-white: #fff5e6;
+  --off-white: #fffbf4;
   --gold: #eba93f;
   --dark-gold: #80560f;
-  --off-black: #393838;
+  --off-black: #5f5f5f;
 }
 
 * {
@@ -37,6 +37,10 @@ h4 {
 a {
   font-weight: bold;
   color: var(--gold);
+}
+
+p:not(.calendar *) {
+  line-height: 27px;
 }
 
 header {
@@ -135,7 +139,7 @@ section {
 }
 
 .shapey {
-  background: var(--gold);
+  background: linear-gradient(149deg, var(--gold), #fdd28e);
   padding: 10px 15px;
   text-align: center;
   z-index: 1;
@@ -143,9 +147,9 @@ section {
 
 @media (min-width: 768px) {
   .shapey {
-    background: url("../assets/shapey-shape.svg");
+    /*background: url("../assets/shapey-shape.svg");*/
     background-size: cover;
-    padding: 60px 20%;
+    padding: 40px 20%;
     margin-top: -40px;
   }
 }
@@ -170,4 +174,10 @@ header img {
     width: 60%;
     margin-top: -60px;
   }
+}
+
+.polaroid {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
 }
