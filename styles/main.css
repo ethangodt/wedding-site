@@ -172,7 +172,7 @@ header img {
 @media (min-width: 768px) {
   header img {
     width: 40%;
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 
@@ -183,5 +183,5 @@ header img {
 }
 
 .polaroid > img {
-  max-width: 100%;
+  max-width: 70%;
 }
