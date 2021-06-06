@@ -181,3 +181,7 @@ header img {
   display: flex;
   justify-content: center;
 }
+
+.polaroid > img {
+  max-width: 100%;
+}
