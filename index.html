@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -26,7 +27,8 @@
       </p>
     </div>
     <main>
-      <section>
+      <nav></nav>
+      <section id="RSVP">
         <iframe
           class="airtable-embed airtable-dynamic-height"
           src="https://airtable.com/embed/shrEomCVib2NbWuHo?backgroundColor=green"
@@ -37,7 +39,7 @@
           style="background: transparent; border: 1px solid #ccc;"
         ></iframe>
       </section>
-      <section>
+      <section id="the plan">
         <div class="padded section-header">
           <div style="flex: 1;" class="line"></div>
           <h2 class="section-title">the plan</h2>
@@ -156,7 +158,7 @@
       </section>
 
       <!--LOCATION-->
-      <section>
+      <section id="location">
         <div class="padded section-header">
           <div style="flex: 7;" class="line"></div>
           <h2 class="section-title">location</h2>
@@ -222,7 +224,7 @@
       </section>
 
       <!--TRAVEL-->
-      <section>
+      <section id="travel">
         <div class="padded section-header">
           <div style="flex: 7;" class="line"></div>
           <h2 class="section-title">travel</h2>
@@ -270,7 +272,7 @@
       </section>
 
       <!--ACCOMMODATION-->
-      <section>
+      <section id="accommodation">
         <div class="padded section-header">
           <div style="flex: 1;" class="line"></div>
           <h2 class="section-title">accommodation</h2>
@@ -322,7 +324,7 @@
           for a boutique experience.
         </p>
       </section>
-      <section>
+      <section id="expectations">
         <div class="padded section-header">
           <div style="flex: 1;" class="line"></div>
           <h2 class="section-title">expectations</h2>
@@ -349,5 +351,23 @@
         </div>
       </section>
     </main>
+    <script>
+      const nav = $("nav");
+      const sections = $("section");
+      sections.each((_, section) => {
+        console.log(section);
+        const button = $(`<button>${section.id}</button>`);
+        button.click(function () {
+          $([document.documentElement, document.body]).animate(
+            {
+              scrollTop: $(section).offset().top,
+            },
+            750
+          );
+        });
+        nav.append(button);
+      });
+      console.log(sections);
+    </script>
   </body>
 </html>

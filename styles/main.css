@@ -176,6 +176,28 @@ header img {
   }
 }
 
+nav {
+  grid-column: 2 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+nav button {
+  cursor: pointer;
+  background: var(--gold);
+  margin: 10px 10px;
+  border-radius: 5px;
+  border: none;
+  min-width: 75px;
+  padding: 12px 40px;
+  font-family: "Sarina", cursive;
+  color: var(--off-white);
+  font-size: 15px;
+}
+
 .polaroid-wrapper {
   padding-top: 60px;
   display: flex;
