@@ -198,6 +198,12 @@ nav button {
   font-size: 15px;
 }
 
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
 .polaroid-wrapper {
   padding-top: 60px;
   display: flex;
