@@ -176,12 +176,22 @@ header img {
   }
 }
 
-.polaroid {
+.polaroid-wrapper {
   padding-top: 60px;
   display: flex;
   justify-content: center;
 }
 
-.polaroid > img {
-  max-width: 70%;
+.polaroid {
+  width: 80%;
+  height: 200px;
+  background: url("../assets/polaroid.png") center no-repeat;
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  .polaroid {
+    width: 50%;
+    height: 200px;
+  }
 }
