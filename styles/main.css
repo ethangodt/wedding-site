@@ -223,3 +223,7 @@ nav button {
     height: 200px;
   }
 }
+
+#registry li {
+  margin-bottom: 15px;
+}
